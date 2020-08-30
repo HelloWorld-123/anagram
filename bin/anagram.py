@@ -9,7 +9,7 @@ class Anagrams:
 
         lock.acquire()
         try:
-            words_file = open('data/words.txt', 'r')
+            words_file = open('data/data.txt', 'r')
             self.words = words_file.read().splitlines()
             words_file.close()
         finally:
