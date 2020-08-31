@@ -4,10 +4,16 @@ from bin.anagram import Anagrams
 
 
 def start_time_method():
+    """
+    Take starting time
+    """
     return datetime.datetime.now()
 
 
 def execution_time_method(start_time):
+    """
+    calculate time from start time
+    """
     end_time = datetime.datetime.now()
     time_diff = (end_time - start_time)
     execution_time = time_diff.total_seconds() * 1000
@@ -15,6 +21,10 @@ def execution_time_method(start_time):
 
 
 def loading_dictionary():
+    """
+    create object for Anagram class
+    load input file into memory
+    """
     start_time = start_time_method()
     file = sys.argv[-1]
     anagram_object = Anagrams(file)
@@ -25,6 +35,9 @@ def loading_dictionary():
 
 
 def _get_anagrams(anagram_object, word):
+    """
+    return all the anagrams for given word from input file
+    """
     start_time = start_time_method()
     anagram_list = anagram_object.get_anagrams(word)
     anagram_list_len = len(anagram_list)
@@ -37,6 +50,10 @@ def _get_anagrams(anagram_object, word):
 
 
 def main():
+    """
+    run program in loop
+    terminate program if input is exit
+    """
     print("Welcome to the Anagram Finder\n-----------------------------")
     anagram_object = loading_dictionary()
     while True:

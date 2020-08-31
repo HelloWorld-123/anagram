@@ -1,17 +1,5 @@
 import unittest
-from bin.anagram import Anagrams
 from bin.string_sorts import sort_string, sorted_list_of_strings
-
-
-class TestAnagrams(unittest.TestCase):
-
-    def test_anagram(self):
-        file = 'words.txt'
-        anagrams = Anagrams(file)
-        anagrams.load_dictionary()
-        self.assertEqual(anagrams.get_anagrams('stop'), ['opts','post','pots','spot','stop','tops'])
-        self.assertEqual(anagrams.get_anagrams('eat'), ['ate', 'eat', 'tea'])
-
 
 class TestStringSorter(unittest.TestCase):
 

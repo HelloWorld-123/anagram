@@ -11,8 +11,8 @@ class Anagrams:
             words_file = open('./'+file, 'r')
             self.words = words_file.read().splitlines()
             words_file.close()
-        except IOError:
-            print("Error: File does not appear to exist.")
+        except IOError as err:
+            print("Error: File does not appear to exist. {}".format(err))
             sys.exit()
         finally:
             lock.release()
@@ -25,7 +25,7 @@ class Anagrams:
         lock.acquire()
         try:
             sorted_word = ''.join(sort_string(word))
-            anagram_list=self.sorted_list_of_words[sorted_word]
+            anagram_list = self.sorted_list_of_words[sorted_word]
         finally:
             lock.release()
         return anagram_list
