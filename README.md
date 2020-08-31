@@ -25,7 +25,8 @@ In order to run this utility, we require:
 
 ### Executing the Utility
 - Save the dictionary file (should be in .txt format) in the /anagram directory. Make sure it is in the same folder as find_anagrams.py.
-- Execute the command *python find_anagrams.py < filename >.txt*
+- Execute the command 
+  *python find_anagrams.py < filename >.txt*
   
  ![image](https://user-images.githubusercontent.com/31774787/91685526-36420a80-eb20-11ea-9b46-d5161c6f5d16.png)
  
