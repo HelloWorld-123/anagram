@@ -41,7 +41,7 @@ In order to run this utility, we require:
 ## Algorithm behind the scenes
 - Algorithm creates a hashmap with sorted string as key and all the words made up from those letters in the form of list as its value.
 - hashmap is quick to access the list of anagrams, having complexity of O(1). 
-- But overall Complexity of program is O(n) as creating hashmap needs to loop through all the words in input file. where n is the number of words in the dictionary.
+- But overall Complexity of program is O(n) as creating hashmap needs to loop through all the words in input file. where n is the number of words in the input file (dictionary).
 
 ## Time required
 - Time required to complete this project was 4-6 hours.
